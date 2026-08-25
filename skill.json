@@ -1,0 +1,41 @@
+{
+  "name": "genpark-cloud-sandbox-ephemeral-execution-environment-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Ephemeral cloud developer sandbox spawner with sub-second boot times, gVisor isolation, live HTTPS preview tunnels, and collaborative LSP.",
+  "author": "genpark",
+  "category": "cloud-dev",
+  "tags": [
+    "cloud-sandbox",
+    "ephemeral-containers",
+    "gvisor-isolation",
+    "collaborative-ide",
+    "replit"
+  ],
+  "inputs": {
+    "runtime_language": {
+      "type": "string"
+    },
+    "cpu_cores": {
+      "type": "integer"
+    },
+    "memory_gb": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "sandbox_container_id": {
+      "type": "string"
+    },
+    "container_boot_latency_ms": {
+      "type": "integer"
+    },
+    "public_https_preview_tunnel": {
+      "type": "string"
+    },
+    "secure_gvisor_sandboxing_isolated": {
+      "type": "boolean"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
